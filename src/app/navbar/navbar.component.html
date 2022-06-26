@@ -1,0 +1,63 @@
+<nav id="navbar-main" class="background navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned">
+    <div class="container">
+      <a class="navbar-brand mr-lg-5" [routerLink]="['/home']">
+        <div class="row">
+            <!-- <div class="col-6 logo">
+                <img src="assets/img/favicon.png">
+            </div> -->
+            <div class=" logo-title">
+                <div>TechBorg</div>
+            </div>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbar_global" [ngbCollapse]="isCollapsed">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a [routerLink]="['/home']">
+                <img src="./assets/img/brand/blue.png">
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" (click)="isCollapsed = !isCollapsed"
+                    [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link no-caret" data-toggle="dropdown" role="button">
+              <i class="ni ni-collection d-lg-none"></i>
+              <span class="nav-link-inner--text">About Us</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link no-caret" data-toggle="dropdown" role="button">
+              <i class="ni ni-ui-04 d-lg-none"></i>
+              <span class="nav-link-inner--text">Contact Us</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+          <li class="nav-item">
+            <a class="nav-link nav-link-icon" href="#" target="_blank" data-toggle="tooltip">
+              <span>Login</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-icon" href="#" target="_blank" data-toggle="tooltip">
+              <span>SignUp</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
